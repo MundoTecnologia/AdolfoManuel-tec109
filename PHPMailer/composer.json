@@ -1,0 +1,11 @@
+{
+    "require": {
+        "paypal/rest-api-sdk-php": "*",
+        "symfony/var-dumper": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Consultoria\\": "Consultoria"
+        }
+    }
+}
