@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo com css</title>
+</head>
+<body>
+
+    <style>
+        ::-webkit-scrollbar{
+            width: 10px;
+            height: 0px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: rgba(255, 166, 0, 0.529);
+            border-radius: 20px;
+        }
+        body{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            box-shadow: 0px 0px 4px gray;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            position:fixed;
+            width: 100%;
+            top: 0px;
+            background-color: rgba(255, 166, 0, 0.529);
+        }
+        header > img{
+            border-radius: 100%;
+            border: 1px solid orangered;
+            align-items: center;
+            display: flex;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            gap: 15px;           
+        }
+        nav > li > a {
+            text-decoration: none;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+        nav >li {
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            list-style: none;
+        }
+        nav > a{
+            text-decoration: none;
+        }
+        li{
+            gap: 5px;
+        }
+        a{
+            color: orangered;
+        }
+        a:hover{
+            transition: .1s linear;
+            text-underline-offset: calc(10px);
+            text-decoration: underline;
+        }
+        h1{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .container{
+            display: flex;
+            margin: auto;
+            gap:36px;
+            align-items: center;
+            padding: 30px;
+            border-bottom-left-radius: 500px;
+            margin-top: 72px;
+            box-shadow: 0px 0px 2px orange;
+        }
+        .container-one{
+            margin: auto;
+            display: flex;
+        }
+        .container-two{
+            font-size: 14px;
+        }
+        .container-two button{
+            background-color: orangered;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #images{
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+        img{
+            margin: auto;
+            justify-content: space-around;
+        }
+        h1{
+            color: orangered;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .images{
+            display: flex;
+            margin: auto;
+        }
+        #videos{
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+        video{
+            margin: auto;
+            justify-content: space-around;
+            width: 30%;
+        }
+        .videos{
+            display: flex;
+            margin: auto;
+            gap:20px;
+        }
+        #audios{
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+        audio{
+            margin: auto;
+            justify-content: space-around;
+            width: 30%;
+        }
+        .audios{
+            display: flex;
+            margin: auto;
+            gap: 20px;
+        }
+    </style>
+
+  <header>
+    <img src="../Learning-amico.png" alt="" width="60" >
+    <nav>
+        <li>
+      <a href="#images">Imagens</a>
+    </li>
+
+    <li>
+        <a href="#videos">Vídeos</a>
+    </li>
+    <li>
+        <a href="#audios">Áudios</a>
+    </li>
+</nav>
+</header>
+
+<div class="container">
+    <div class="container-one">
+        <img src="Online learning-amico.png" alt="" width="300" >
+    </div>
+    <div class="container-two">
+        <h1>Seja bem-vindo ao nosso site</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil animi maxime facere, voluptas adipisci modi placeat quae laudantium deleniti cupiditate magnam minus quam officiis fugiat dolorum laboriosam quis illo. Aspernatur?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil animi maxime facere, voluptas adipisci modi placeat quae laudantium deleniti cupiditate magnam minus quam officiis fugiat dolorum laboriosam quis illo. Aspernatur?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil animi maxime facere, voluptas adipisci modi placeat quae laudantium deleniti cupiditate magnam minus quam officiis fugiat dolorum laboriosam quis illo. Aspernatur?
+        </p>
+        <button>Ler mais</button>
+    </div>
+</div>
+
+  <div id="images"> 
+    <h1>Imagens</h1>
+    <div class="images" >
+    <img src="Muslim graduation-amico.png" alt="Primeira Imagem" width="180">
+    <img src="Muslim graduation-cuate.png" alt="Segunda Imagem" width="180">
+    <img src="Online learning-amico.png" alt="Terceira Imagem" width="180">
+</div>  
+</div>
+
+  
+  <div id="videos"> 
+    <h1>Vídeos</h1>
+    <div class="videos">
+    <video controls poster="Muslim graduation-amico.png" src="../Curso Mestre DevOps - Inscrições Abertas.mp4" alt="Primeira Imagem" width="180"></video>
+    <video poster="Muslim graduation-cuate.png" controls src="Curso Power BI para Iniciantes.mp4" alt="Segunda Imagem" width="180"></video> 
+    <video poster="Online learning-amico.png" controls src="Versionando seus projetos antigos - Curso de Git e GitHub.mp4" alt="Segunda Imagem" width="180"></video> 
+</div>  
+</div>
+  
+  <div id="audios"> 
+    <h1>Áudios</h1>
+    <div class="audios">
+    <audio src="../Morada.mp3"  controls  alt="Morada"></audio>
+    <audio src="Tua Presença.mp3" controls alt="Tua Presença"></audio>
+    <audio src="Tua Presença.mp3" controls alt="Tua Presença"></audio>  
+</div>
+</div>
+
+</body>
+</html>
+
+<!-- Uma página com um logo no header, e :  
+
+ 1º link Vai para imagens abaixo; 
+ 2º Link Vai para o vídeos
+ 3º Link vai para os áudios
+ 4º Link vai para uma outra página ao nosso critério
+ 
+   -->

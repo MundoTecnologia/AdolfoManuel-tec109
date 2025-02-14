@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <script>
+        function Relogio() {
+            const now = new Date();
+            const data = now.toLocaleDateString();
+            const hora = now.toLocaleTimeString();
+
+            console.clear();
+            console.log(`Data: ${data}  Hora: ${hora}`);
+            setTimeout(Relogio, 1000);
+        }
+        Relogio()
+    </script>
+</body>
+
+</html>

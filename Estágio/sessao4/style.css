@@ -1,0 +1,400 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    color: rgb(34,34,34);
+    text-rendering: optimizeLegibility;
+    outline: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 38px;
+    background-color: #6929a5;
+    border-bottom: 1px solid #3b3939;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 80px;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    align-items: center;
+    margin: auto;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+@media (max-width: 814px) {
+    nav a {
+        display: none; /* Esconde os textos dos links */
+    }
+
+    nav li {
+        gap: 0; /* Reduz o espaçamento ao redor dos ícones */
+    }
+
+    nav img {
+        width: 20px; /* Ajusta o tamanho dos ícones para telas menores */
+    }
+
+    header {
+        padding: 0 20px; /* Ajusta o espaçamento do header */
+    }
+
+    .logo {
+        font-size: 16px; /* Reduz o tamanho da logo */
+    }
+}
+
+.container {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    background-color: #6929a5;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#one {
+    align-items: center;
+    display: block;
+    padding: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+#two {
+    background: #9c4ce8;
+    padding: 8px;
+    border-radius: 30px;
+    width: 40%;
+    height: 415px;
+}
+#two img{
+    width: 90%;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 80px;
+    color: white;
+}
+
+p {
+    color: black;
+    background-color: white;
+    width: max-content;
+}
+
+#img {
+    position: relative;
+    top: 30px;
+}
+
+main {
+    display: block;
+}
+
+article {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 50px;
+    background-color: whitesmoke;
+    margin-bottom: -10px;
+}
+
+.article-card {
+    background-color: white;
+    padding: 10px;
+    width: 310px;
+    height: 150px;
+}
+
+h2 {
+    color: black;
+    margin: auto;
+    text-align: center;
+    margin-left: 45px;
+    margin-top: -55px;
+    margin-bottom: 35px;
+}
+
+h3 {
+    text-align: left;
+    color: black;
+    position: relative;
+}
+
+.article-card p {
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: gray;
+    position: relative;
+    top: -30px;
+    left: 10px;
+}
+
+.article-card-text {
+    display: block;
+}
+
+.svg {
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: -5px;
+}
+
+.img-fundo {
+    background-image: url(single-image3.542c1d65.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30px;
+    background-attachment: fixed;
+}
+
+.eletronicos {
+    width: 100%;
+    display: block;
+}
+
+.eletronicos-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.eletronicos-card div {
+    background-color: white;
+    display: block;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 224px;
+    border-radius: 12px;
+    margin: auto;
+    justify-content: center;
+}
+
+.eletronicos-card div img {
+    display: block;
+}
+
+.card-baixo {
+    display: flex;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 224px;
+    border-radius: 12px;
+    background-color: white;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.eletronicos-description {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.product-price p {
+    font-weight: 600;
+    color: #555;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.favorite-button {
+    position: relative;
+    top: 5px;
+    left: 160px;
+    width: 34px;
+    height: 34px;
+    border-radius: 34px;
+    border: none;
+    background-color: #f1f4f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-add {
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    gap: 12px;
+    padding: 8px 16px;
+    align-self: flex-start;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #555;
+    background-color: initial;
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+footer {
+    width: 100%;
+}
+
+footer article {
+    display: flex;
+    justify-content: space-around;
+}
+
+h4 {
+    color: #222222;
+    line-height: 25px;
+}
+
+h4, span {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.hr {
+    margin: auto;
+    width: 90%;
+}
+
+.form {
+    display: block;
+}
+
+.form input {
+    display: block;
+    border: none;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #6929a5;
+    border: none;
+    color: white;
+}
+
+.footer {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+hr {
+    width: 400px;
+    margin-bottom: 130px;
+    margin: auto;
+}
+
+.span {
+    top: 30px;
+    position: relative;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .article-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .eletronicos-card div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .eletronicos-card div {
+        width: 90%;
+    }
+}

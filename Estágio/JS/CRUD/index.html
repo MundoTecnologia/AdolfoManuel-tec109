@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <style>
+        #dataTable {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input id="nome" type="text" placeholder="Nome Completo">
+    <input id="telefone" type="tel" placeholder="Número de Telefone">
+    <button id="handleSave">Salvar</button>
+    <br><br>
+
+    <table id="dataTable" border="1">
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+<script>
+    let editIndex = -1;
+
+    function Validation(){
+        var nome = document.getElementById("nome").value;
+        var telefone = document.getElementById("telefone").value;
+
+        if(!nome && !telefone){
+            alert("Preencha tudo!");
+            return false;
+        }
+        else if(!nome){
+            alert("Coloque Nome");
+            return false;
+        }
+        else if(!telefone){
+            alert("Coloque o Telefone");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    function isDuplicate(nome, telefone) {
+        var table = document.getElementById("dataTable");
+        for (var i = 1, row; row = table.rows[i]; i++) {
+            if (row.cells[0].textContent === nome && row.cells[1].textContent === telefone) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function clearInputs() {
+        document.getElementById("nome").value = "";
+        document.getElementById("telefone").value = "";
+        editIndex = -1;
+    }
+
+    document.getElementById("handleSave").addEventListener("click", () => {
+        const NomeCompleto = document.getElementById("nome").value;
+        const NumeroDeTelefone = document.getElementById("telefone").value;
+
+        if (Validation()) {
+            if (isDuplicate(NomeCompleto, NumeroDeTelefone)) {
+                alert("Dados já informados!");
+                return;
+            }
+
+            var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+            table.parentElement.style.display = "table"; // Show the table
+
+            if (editIndex === -1) {
+                var newRow = table.insertRow(-1);
+            } else {
+                var newRow = table.rows[editIndex];
+            }
+
+            var cell1 = newRow.cells[0] || newRow.insertCell(0);
+            var cell2 = newRow.cells[1] || newRow.insertCell(1);
+            var cell3 = newRow.cells[2] || newRow.insertCell(2);
+
+            cell1.textContent = NomeCompleto;
+            cell2.textContent = NumeroDeTelefone;
+
+            if (cell3.childNodes.length === 0) {
+                var deleteButton = document.createElement("button");
+                deleteButton.textContent = "Eliminar";
+                deleteButton.addEventListener("click", function() {
+                    table.deleteRow(newRow.rowIndex - 1);
+                    if (table.rows.length === 0) {
+                        table.parentElement.style.display = "none"; // Hide the table if no data
+                    }
+                });
+                cell3.appendChild(deleteButton);
+
+                var editButton = document.createElement("button");
+                editButton.textContent = "Editar";
+                editButton.addEventListener("click", function() {
+                    document.getElementById("nome").value = NomeCompleto;
+                    document.getElementById("telefone").value = NumeroDeTelefone;
+                    editIndex = newRow.rowIndex - 1;
+                });
+                cell3.appendChild(editButton);
+            }
+
+            clearInputs(); 
+        }
+    });
+</script>
+</body>
+</html>
